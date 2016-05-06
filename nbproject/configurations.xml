@@ -16,7 +16,6 @@
       <logicalFolder name="f1" displayName="sensors" projectFiles="true">
         <itemPath>sensors/barometer.h</itemPath>
       </logicalFolder>
-      <itemPath>sensors/i2c_api.h</itemPath>
       <itemPath>i2c_api.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
