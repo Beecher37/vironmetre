@@ -20,7 +20,7 @@ extern "C" {
     
 bool            BMP180_Init(void);
 bool            BMP180_GetTemperature(double* T);
-bool            BMP180_GetPressure(double* P, double* T, uint8_t OSS);
+bool            BMP180_GetPressure(double* P, double T, uint8_t OSS);
 
 #ifdef	__cplusplus
 }

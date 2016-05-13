@@ -146,7 +146,7 @@ bool BMP180_GetTemperature(double* T)
     return false;
 }
 
-bool BMP180_GetPressure(double* P, double* T, uint8_t OSS)
+bool BMP180_GetPressure(double* P, double T, uint8_t OSS)
 {
     uint8_t data[3];
     
@@ -190,7 +190,7 @@ bool BMP180_GetPressure(double* P, double* T, uint8_t OSS)
             printf("     %d\n", data[2]); 
             */
             pu = (data[0] * 256.0) + data[1] + (data[2]/256.0);
-            s = *T - 25.0;
+            s = T - 25.0;
             x = (x2 * pow(s,2)) + (x1 * s) + x0;
             y = (y2 * pow(s,2)) + (y1 * s) + y0;
             z = (pu - x) / y;

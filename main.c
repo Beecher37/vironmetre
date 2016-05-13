@@ -145,7 +145,7 @@ void main() {
                         while (!SEN_CONN_GetValue()) {
                             if (BMP180_GetTemperature(&T)) {
                                 printf("%f deg\n", T);
-                                if(BMP180_GetPressure(&P, &T, 3))
+                                if(BMP180_GetPressure(&P, T, 3))
                                     printf("%f\n\n", P);
                                 else
                                     error_led();                        
